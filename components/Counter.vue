@@ -1,17 +1,19 @@
 <template>
   <div class="h1">
-    <h1>{{ msg }}</h1>
-    <h3>{{ store.count }}</h3>
+    <h1 data-cy="name">{{ msg }}</h1>
+    <h3 data-cy="count">{{ store.count }}</h3>
     <div class="btn-wrapper">
       <button
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         @click="decrement"
+        data-cy="decrement"
       >
         -
       </button>
       <button
         class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         @click="increment"
+        data-cy="increment"
       >
         +
       </button>
