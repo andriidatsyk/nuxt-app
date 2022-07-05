@@ -1,4 +1,4 @@
-import { assert, expect, it, describe, test, beforeEach } from 'vitest'
+import { expect, it, describe, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useStore } from '../stores/counter.js'
 
