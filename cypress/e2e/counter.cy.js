@@ -21,7 +21,8 @@ describe('Counter testing', () => {
     cy.url().should('eq', URL)
   })
   it('default name', () => {
-    cy.get('[data-cy="name"]').should('have.text', 'Counter App')
+    const defaultName = 'Counter'
+    cy.get('[data-cy="name"]').should('have.text', defaultName)
   })
   it('default count', () => {
     cy.get('[data-cy="count"]').should('have.text', '0')

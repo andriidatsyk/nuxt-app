@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      msg: 'Counter App',
+      msg: 'Counter',
     }
   },
   methods: {
