@@ -1,6 +1,8 @@
+/// <reference types="cypress" />
+
 describe('Counter testing', () => {
-  const URL = 'http://localhost:3000/'
-  const click11Times = (selector, count) => {
+  const URL: string = Cypress.env('URL')
+  const click11Times = (selector: string, count: number) => {
     cy.get(`[data-cy="${selector}"]`)
       .click()
       .click()
@@ -17,7 +19,7 @@ describe('Counter testing', () => {
     cy.get('[data-cy="count"]').should('have.text', `${count}`)
   }
   it('visit', () => {
-    cy.visit(URL)
+    cy.visit('/')
     cy.url().should('eq', URL)
   })
   it('default name', () => {
