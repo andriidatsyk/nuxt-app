@@ -2,26 +2,51 @@
 
 describe('Auth testing', () => {
   const URL: string = Cypress.env('URL')
-  it('check url', () => {
-    cy.visit('/login')
-    cy.url().should('eq', URL + 'login')
+
+  const invEmail = 'invemail@mail.ai'
+  const invPassword = 'password'
+
+  const email = 'email@mail.ai'
+  const password = 'secret'
+
+  context.skip('Main check', () => {
+    it('check url', () => {
+      cy.visit('/login')
+      cy.url().should('eq', URL + 'login')
+    })
+    it('header auth', () => {
+      cy.get('h2').should('have.text', ' Sign in to your account ')
+    })
+    it('remember me', () => {
+      cy.get('#remember-me').click()
+    })
+    it('forgot your password', () => {
+      cy.contains('Forgot your password?')
+    })
   })
-  it('header auth', () => {
-    cy.get('h2').should('have.text', ' Sign in to your account ')
+
+  context('Invalid and input validation', () => {
+    it('', () => {
+      cy.visit('/login')
+    })
+    it('input email validation', () => {
+      cy.get('#email-address').type('email.ai{enter}')
+      cy.get('.notify').should('be.visible')
+    })
+    // TODO
   })
-  it('email input', () => {
-    cy.get('#email-address')
-  })
-  it('password input', () => {
-    cy.get('#password')
-  })
-  it('remember me', () => {
-    cy.get('#remember-me')
-  })
-  it('forgot your password', () => {
-    cy.contains('Forgot your password?')
-  })
-  it('btn sign in', () => {
-    cy.get('button')
+
+  context.skip('Valid', () => {
+    it('email input', () => {
+      cy.get('#email-address').type(email).should('have.value', email)
+    })
+    it('password input', () => {
+      cy.get('#password').type(password).should('have.value', password)
+    })
+
+    it('btn sign in, route to main page', () => {
+      cy.get('button').click()
+      cy.url().should('eq', URL)
+    })
   })
 })
