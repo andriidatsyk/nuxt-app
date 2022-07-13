@@ -33,7 +33,7 @@ describe('Auth testing', () => {
       cy.get('#email-address').type('email.ai{enter}')
       cy.get('.notify').should('be.visible')
     })
-    // TODO
+    // TODO Negative behavior
   })
 
   context.skip('Valid', () => {
