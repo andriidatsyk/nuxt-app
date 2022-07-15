@@ -9,7 +9,7 @@ describe('Auth testing', () => {
   const email = 'email@mail.ai'
   const password = 'secret'
 
-  context.skip('Main check', () => {
+  context('Main check', () => {
     it('check url', () => {
       cy.visit('/login')
       cy.url().should('eq', URL + 'login')
@@ -25,7 +25,7 @@ describe('Auth testing', () => {
     })
   })
 
-  context('Invalid and input validation', () => {
+  context.skip('Invalid and input validation', () => {
     it('', () => {
       cy.visit('/login')
     })
@@ -36,7 +36,7 @@ describe('Auth testing', () => {
     // TODO Negative behavior
   })
 
-  context.skip('Valid', () => {
+  context('Valid', () => {
     it('email input', () => {
       cy.get('#email-address').type(email).should('have.value', email)
     })
