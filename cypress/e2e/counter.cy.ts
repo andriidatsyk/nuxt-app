@@ -19,7 +19,7 @@ describe('Counter testing', () => {
     cy.get('[data-cy="count"]').should('have.text', `${count}`)
   }
   it('visit', () => {
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3000/#')
     cy.url().should('eq', URL)
   })
   it('default name', () => {
