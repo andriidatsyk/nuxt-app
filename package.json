@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@pinia/nuxt": "^0.1.9",
+    "@vitest/ui": "^0.18.1",
     "@vue/test-utils": "^2.0.0",
     "cypress": "^10.3.0",
     "nuxt": "3.0.0-rc.4",
