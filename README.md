@@ -2,23 +2,23 @@
 
 Make sure to install the dependencies:
 
-yarn install
+- yarn install
 
 **Development Server**
 
 Start the development server on http://localhost:3000
 
-yarn dev
+- yarn dev
 
 **Production**
 
 Build the application for production:
 
-yarn build
+- yarn build
 
 Locally preview production build:
 
-yarn preview
+- yarn preview
 
 **Cypress**
 - yarn cypress run
