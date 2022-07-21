@@ -1,5 +1,8 @@
 {
   "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "author": "Andriy Datsyk",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
