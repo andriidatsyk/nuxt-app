@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Counter testing', () => {
+describe.skip('Counter testing', () => {
   const URL: string = Cypress.env('URL')
   const click11Times = (selector: string, count: number) => {
     cy.get(`[data-cy="${selector}"]`)
